@@ -1,0 +1,25 @@
+{
+  "name": "pandit-harinath-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered WhatsApp Business chatbot for पंडित हरिनाथ शास्त्री",
+  "workspaces": [
+    "apps/api",
+    "apps/d1-api"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev:d1": "npm run dev --workspace=apps/d1-api",
+    "build:api": "npm run build --workspace=apps/api",
+    "build:d1": "npm run build --workspace=apps/d1-api",
+    "test:api": "npm run test --workspace=apps/api",
+    "lint:api": "npm run lint --workspace=apps/api",
+    "format:api": "npm run format --workspace=apps/api"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.147.0"
+  }
+}

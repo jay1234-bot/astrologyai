@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pandit-harinath-d1-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // D1 Database binding
+  // After running: npx wrangler d1 create pandit-harinath-db
+  // Copy the database_id from the output and paste it below
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "pandit-harinath-db",
+      "database_id": "5e9268d1-1a3c-4d45-89ce-23430801b146"
+    }
+  ],
+
+  // Migrations directory
+  "migrations_dir": "migrations",
+
+  // Environment variables (non-secret)
+  "vars": {
+    "ENVIRONMENT": "production"
+  }
+
+  // NOTE: D1_API_SECRET is a secret — set via:
+  //   npx wrangler secret put D1_API_SECRET
+  // NEVER put secrets in wrangler.jsonc
+}
