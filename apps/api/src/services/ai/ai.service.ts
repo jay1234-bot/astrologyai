@@ -17,7 +17,6 @@ import { CUSTOMER_FALLBACK_MESSAGES } from '../../prompts/system.prompt.js';
 import { ConfigurationError, GeminiError } from '../../utils/errors.js';
 import { logger } from '../../utils/logger.js';
 import type { PromptContext, AiResponse } from '../../types/ai.types.js';
-import type { SupportedLanguage } from '../../config/constants.js';
 
 export class AiService {
   private readonly gemini = getGeminiService();

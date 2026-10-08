@@ -74,10 +74,8 @@ export class GeminiService {
         model: this.model,
         config: {
           systemInstruction: params.systemInstruction,
-          generationConfig: {
-            temperature: params.options?.temperature ?? GEMINI_TEMPERATURE,
-            maxOutputTokens: params.options?.maxOutputTokens ?? GEMINI_MAX_OUTPUT_TOKENS,
-          },
+          temperature: params.options?.temperature ?? GEMINI_TEMPERATURE,
+          maxOutputTokens: params.options?.maxOutputTokens ?? GEMINI_MAX_OUTPUT_TOKENS,
         },
         history: params.history,
       });

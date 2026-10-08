@@ -4,7 +4,7 @@
  */
 
 import type { Context } from 'hono';
-import { env, isGeminiConfigured, isWhatsAppConfigured, isD1Configured } from '../config/env.js';
+import { env, isGeminiConfigured, isWhatsAppConfigured } from '../config/env.js';
 import { getD1Client, isD1Available } from '../clients/d1-api.client.js';
 
 export const healthController = {

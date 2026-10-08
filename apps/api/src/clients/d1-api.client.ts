@@ -11,7 +11,6 @@
 import { env } from '../config/env.js';
 import { D1_API_TIMEOUT_MS } from '../config/constants.js';
 import { D1ApiError, ConfigurationError } from '../utils/errors.js';
-import { logger } from '../utils/logger.js';
 import type { SupportedLanguage } from '../config/constants.js';
 import type { KnowledgeDocument } from '../types/ai.types.js';
 

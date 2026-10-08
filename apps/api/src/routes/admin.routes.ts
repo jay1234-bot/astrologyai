@@ -60,7 +60,6 @@ admin.get('/users', async (c) => {
       knowledge_count: docs.length,
     });
   } catch (err) {
-    const message = err instanceof Error ? err.message : 'Unknown error';
     return c.json({ error: 'Database error' }, 500);
   }
 });

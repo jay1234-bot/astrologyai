@@ -3,7 +3,7 @@
  * HMAC SHA-256 verification for Meta webhook signatures
  */
 
-import { createHmac, timingSafeEqual } from 'crypto';
+import { createHmac, timingSafeEqual, randomFillSync } from 'crypto';
 
 /**
  * Verify a Meta WhatsApp Cloud API webhook signature.
@@ -60,8 +60,6 @@ export function verifyWebhookSignature(
  */
 export function generateVerifyToken(): string {
   const buf = Buffer.alloc(32);
-  // Use crypto.getRandomValues via Node.js
-  const { randomFillSync } = await import('crypto').then((m) => m);
   randomFillSync(buf);
   return buf.toString('hex');
 }

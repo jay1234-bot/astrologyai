@@ -29,7 +29,7 @@ export class WhatsAppClient {
 
   constructor(
     private readonly accessToken: string,
-    private readonly phoneNumberId: string
+    phoneNumberId: string
   ) {
     this.baseUrl = `${WHATSAPP_API_BASE_URL}/${WHATSAPP_API_VERSION}/${phoneNumberId}/messages`;
   }
@@ -49,11 +49,10 @@ export class WhatsAppClient {
       });
 
       if (!response.ok) {
-        let errorBody: unknown;
         try {
-          errorBody = await response.json();
+          await response.json();
         } catch {
-          errorBody = null;
+          // Ignore parse errors on error responses
         }
         log.warn('WhatsApp API error response', { status: response.status });
         throw new WhatsAppApiError(

@@ -35,7 +35,7 @@ import { getLanguageService } from '../services/language/language.service.js';
 import { getKnowledgeService } from '../services/knowledge/knowledge.service.js';
 import { getConversationService } from '../services/conversation/conversation.service.js';
 import { getMessageService } from '../services/conversation/message.service.js';
-import { LANGUAGE_CHANGE_MESSAGES, CUSTOMER_FALLBACK_MESSAGES } from '../prompts/system.prompt.js';
+import { LANGUAGE_CHANGE_MESSAGES } from '../prompts/system.prompt.js';
 import { prepareResponseForWhatsApp } from '../services/ai/response.service.js';
 import type { SupportedLanguage } from '../config/constants.js';
 import type {
